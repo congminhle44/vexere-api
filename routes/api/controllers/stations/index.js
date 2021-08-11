@@ -9,8 +9,6 @@ router.get("/", stationController.getStations);
 router.get("/:id", stationController.getStationById);
 router.post(
   "/",
-  authenticate,
-  authorize(["admin"]),
   stationController.postStation
 );
 router.put(
